@@ -4,13 +4,21 @@
 angular.module('LCApp', [])
 .controller('LCController', LCController);
 
-  LCController.$inject = ['$scope', '$filter'];
-  function LCController($scope, $filter) {
-    scope.name = "lunch check";
+ function LCController ($scope,
+                        $filter,
+                        $injector) {
+   $scope.name= "lunch check";
 
-    $scope.upper
-    
+   $scope.lunch = function () {
+     var luCheck = $filter('lunchCheck');
+     $scope.name = luCheck($scope.name);
   };
+   
+console.log($injector.annotate(LCController));
+ }
+
+function AnnotateMe (sandwich, soup, salad) {
+  return "Salad";
 }
   
 })();
