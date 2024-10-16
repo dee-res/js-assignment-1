@@ -1,7 +1,7 @@
 (function () {
 'use strict';
   
-var LCApp = angular.module('LCApp', [])
+angular.module('LCApp', [])
 .controller('LCController', LCController);
 
  function LCController ($scope,
