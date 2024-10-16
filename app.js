@@ -1,11 +1,16 @@
 (function () {
 'use strict';
   
-  angular.module('lunchCheck', [])
+angular.module('lunchCheck', [])
+.controller('LunchCheckController', ['$scope, '$filter', LunchCheckController]);
 
-  .controller('LunchCheckController', function () {
+  function LunchCheckController($scope, $filter) {
+    scope.name = "lunch";
+
+    $scope.upper
     
-  });
+  };
+}
   
 })();
   
