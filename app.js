@@ -4,26 +4,28 @@
 angular.module('LCApp', [])
 .controller('LCController', LCController);
 
- function LCController ($scope,
-                        $filter,
-                        $injector) {
+LCController.$inject = ['$scope'];
+ function LCController($scope,) {
    $scope.name= "lunch check";
 
-   $scope.lunch = function () {
-     var luCheck = $filter('lunchCheck');
-     $scope.name = luCheck($scope.name);
+   $scope.sayMessage = function () {
+     return "Enjoy!"
   };
+ }
+})();
 
-const str = 'Enjoy!'
 
-const words = str.split(' ');
-console.log(words[3]);
 
-const chars = str.split(' ');
-console.log(chars[8];
+//const str = 'Enjoy!'
 
-const strCopy = str.split();
-console.log(strCopy);
+//const words = str.split(' ');
+//console.log(words[3]);
+
+//const chars = str.split(' ');
+//console.log(chars[8];
+
+//const strCopy = str.split();
+//console.log(strCopy);
 
   
 })();
