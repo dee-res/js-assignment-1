@@ -13,13 +13,18 @@ angular.module('LCApp', [])
      var luCheck = $filter('lunchCheck');
      $scope.name = luCheck($scope.name);
   };
-   
-console.log($injector.annotate(LCController));
- }
 
-function AnnotateMe (sandwich, soup, salad) {
-  return "Salad";
-}
+const str = 'Enjoy!'
+
+const words = str.split(' ');
+console.log(words[3]);
+
+const chars = str.split(' ');
+console.log(chars[8];
+
+const strCopy = str.split();
+console.log(strCopy);
+
   
 })();
   
