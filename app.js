@@ -1,11 +1,11 @@
 (function () {
 'use strict';
   
-angular.module('lunchCheck', [])
-.controller('LunchCheckController', LunchCheckController);
+angular.module('LCApp', [])
+.controller('LCController', LCController);
 
-  LunchCheckController.$inject = ['$scope', '$filter'];
-  function LunchCheckController($scope, $filter) {
+  LCController.$inject = ['$scope', '$filter'];
+  function LCController($scope, $filter) {
     scope.name = "lunch";
 
     $scope.upper
