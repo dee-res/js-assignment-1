@@ -5,7 +5,7 @@ angular.module('LCApp', [])
 .controller('LCController', LCController);
 
 LCController.$inject = ['$scope'];
- function LCController($scope,) {
+ function LCController($scope) {
    $scope.name= "lunch check";
 
    $scope.sayMessage = function () {
