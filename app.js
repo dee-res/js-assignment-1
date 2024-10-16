@@ -3,7 +3,7 @@
   
   angular.module('lunchCheck', [])
 
-  .controller('MyFirstController', function () {
+  .controller('LunchCheckController', function () {
     
   });
   
