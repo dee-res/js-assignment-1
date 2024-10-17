@@ -1,4 +1,4 @@
-(function () {
+(function() {
 'use strict';
   angular.module('lunchCheck', [])
   .controller('LCController', LCController);
@@ -6,30 +6,23 @@
   LCController.$inject = ['$scope'];
 
   function LCController($scope) {
-    $scope.dishes = '';
-    $scope.message = '';
-    $scope.checked = false;
-
-    $scope.lunchCheck = function() {
-      if ($scope.dishes.trim().length === 0) {
-        $scope.empty = true;
-      } else {
-          $scope.checked = true;
-          $scope.empty = false;
-          var arrayDishes = $scope.dishes.split();
-          var arrayDishesWithoutEmptys = arrayDishes.filter(function(v) {
-            return v.trim() !== '';
-          });
-
-          if (arrayDishesWithoutEmptys.length <=3) {
-            $scope.message = 'Enjoy!';
-          } else {
-              $scope.message = 'Too much!';
-          }
-      }
-    };
-  }
-})();
+    $scope.checkLunch = function() {
+      if (!$scope.dishes) {
+        $scope.message = "Please enter data first";
+        return;
+      } 
+    var items = $scope.lunchItems.split(',').filter(item => item.trim() !== '');
+        if (items.length === 0) {
+          $scope.message = "Please enter the data first";
+        } else if (items.length <= 3) {
+          $scope.message = "Enjoy your meal!";
+        } else {
+          $scope.message = "Too much!";
+        }
+      };
+    }
+  })();
+         
             
           
 
