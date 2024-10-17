@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="LCApp">
+<html lang="en" ng-app="LunchCheck">
   <head>
     <meta charset="utf-8">
     <script src="angular.min.js"></script>
@@ -13,16 +13,16 @@
   </head>
   
 <body>
-  <h1>Lunch Checker</h1>
 
-  <div ng-controller="LCController">
+  <div "container" ng-controller="LCController">
+    <h1>Lunch Checker</h1>
    <div class="form-group">
-             <input ng-model="lunch-menu" type="text"
+             <input id="lunch-menu" type="text"
              placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control">
+             class="form-control" ng-model="dishes">
          </div>
          <div class="form-group">
-             <button ng-click='LCcontroller'>Check If Too Much</button>
+             <button class="btn btn-default ng-click="checkLunch()">Check If Too Much</button>
          </div>
          <div ng-controller='LCController'>
            {{sayMessage()}}
