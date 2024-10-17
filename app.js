@@ -1,6 +1,6 @@
 (function () {
 'use strict';
-  angular.module('LunchCheck', [])
+  angular.module('lunchCheck', [])
   .controller('LCController', LCController);
 
   LCController.$inject = ['$scope'];
