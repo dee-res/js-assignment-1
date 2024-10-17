@@ -1,7 +1,7 @@
 (function () {
 'use strict';
   angular.module('LCApp', [])
-  .filter('myFilter', function() {
+  .LCController('myFilter', function() {
     return function(input) {
       return 'Prefix: ' + input;
     };
