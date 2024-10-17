@@ -16,7 +16,7 @@
       } else {
           $scope.checked = true;
           $scope.empty = false;
-          var arrayDishes = $scope.dishes.split(,);
+          var arrayDishes = $scope.dishes.split();
           var arrayDishesWithoutEmptys = arrayDishes.filter(function(v) {
             return v.trim() !== '';
           });
