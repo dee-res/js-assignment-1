@@ -65,5 +65,4 @@
 //console.log(strCopy);
 
   
-})();
   
