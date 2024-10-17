@@ -1,18 +1,26 @@
 (function () {
 'use strict';
+  angular.module('LCApp', [])
+  .filter('myFilter', function() {
+    return function(input) {
+      return 'Prefix: ' + input;
+    };
+  });
+
   
-angular.module('LCApp', [])
-.controller('LCController', LCController);
+  
+  //angular.module('LCApp', [])
+//.controller('LCController', LCController);
 
-LCController.$inject = ['$scope'];
-function LCController($scope) {
-$scope.name= "lunch check";
+//LCController.$inject = ['$scope'];
+//function LCController($scope) {
+//$scope.name= "lunch check";
 
-  $scope.sayMessage = function () {
-    return "Enjoy!";
-  };
-}
- })();
+//  $scope.sayMessage = function () {
+//    return "Enjoy!";
+//  };
+//}
+// })();
 
 //LCController.$inject = ['$scope'];
 // function LCController($scope) {
