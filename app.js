@@ -10,7 +10,7 @@
     $scope.message = '';
     $scope.checked = false;
 
-    $scope.checkLunch = function() {
+    $scope.lunchCheck = function() {
       if ($scope.dishes.trim().length === 0) {
         $scope.empty = true;
       } else {
